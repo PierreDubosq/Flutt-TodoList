@@ -50,6 +50,7 @@ class _TodoListState extends State<TodoList> {
               onPressed: () {
                 setState(() {
                   if (_todo.isNotEmpty) _todos.add(_todo);
+                  _todo = '';
                 });
                 Navigator.of(context).pop();
               },
