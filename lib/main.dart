@@ -49,7 +49,8 @@ class _TodoListState extends State<TodoList> {
               child: const Text('Add'),
               onPressed: () {
                 setState(() {
-                  _todos.add(_todo);
+                  if (_todo.isNotEmpty) _todos.add(_todo);
+                  _todo = '';
                 });
                 Navigator.of(context).pop();
               },
